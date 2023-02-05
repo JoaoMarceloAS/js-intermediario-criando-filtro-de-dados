@@ -2,30 +2,79 @@
 
 //1) Crie uma função para filtrar os hotéis que estão localizados no Brasil
 function filterCountry(array) {
-  return;
+
+  let hoteisBrasil = []
+
+  for (i = 0; i < data.length; i++) {
+    hotel = data[i].country
+    if (hotel == 'Brasil') {
+      hoteisBrasil.push(data[i].name)
+    }
+  }
+  console.log('os hoteis localizados no brasil são,', hoteisBrasil.join(', '))
+
 }
-console.log(filterCountry(data));
+filterCountry()
 
 // 2) Crie uma função para filtrar os hotéis que possuem o preço igual ou maior que R$200,00.
 function filterPrice(array) {
-  return;
+
+  let precoHoteis = []
+
+  for (i = 0; i < data.length; i++) {
+    let preco = data[i].price
+    if (preco >= 200) {
+      precoHoteis.push(data[i].name)
+    }
+  }
+
+  console.log('os hoteis com preço maior ou igual a R$200,00 são,', precoHoteis.join(', '))
+
 }
-console.log(filterPrice(data));
+filterPrice()
 
 //3) Crie uma função para filtrar os hotéis que estão abertos nesse momento (isOpen)
 function filterIsOpen(array) {
-  return;
+
+  let hoteisAbertos = []
+
+  for (i = 0; i < data.length; i++) {
+    let funcionando = data[i].isOpen
+    if (funcionando == true) {
+      hoteisAbertos.push(data[i].name)
+    }
+  }
+
+  console.log('Os hoteis que estão abertos são,', hoteisAbertos.join(', '))
+
 }
-console.log(filterIsOpen(data));
+filterIsOpen()
+
 
 //DESAFIO
 //4) Crie uma função que filtre apenas o hotel com o nome “Copacabana Palace”. Após isso, crie outra função para verificar as datas disponíveis para agendamento nesse hotel (isAvaliable).
 function filterHotelName(array) {
-  return;
+
+  let hotel = []
+  for (i = 0; i < data.length; i++) {
+    let nomeHotel = data[i].name
+    if (nomeHotel == 'Copacabana Palace') {
+      hotel.push(nomeHotel)
+    }
+  }
+  return hotel.join('')
 }
+filterHotelName()
 
 function filterToBook() {
   const hotel = filterHotelName(data);
-  return;
+  let datas = []
+
+  for (i - 0; i < data[hotel].length; i++) {
+    if (hotel[i].toBook.isAvaliable == true){
+      datas.push(hotehotel[i].toBook.date)
+    }
+  }
+  console.log('As datas disponíveis no hotel,', hotel, ' são: ', datas.join(', ') )
 }
-console.log(filterToBook());
+filterToBook()
